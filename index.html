@@ -1,0 +1,1314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="大象视频官方网站，是面向原创影像创作者与企业的高清正版视频内容平台，深耕生活记录、人物访谈与在地文化，持续运营高品质内容生态。">
+<title>大象视频_大象视频官方网站_原创高清视频内容平台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315222b'/%3E%3Cpath d='M18 40c0-10 5-18 14-18s14 8 14 18c0 3-2 6-5 6H23c-3 0-5-3-5-6z' fill='%232fbfa8'/%3E%3Ccircle cx='27' cy='34' r='2.6' fill='%2315222b'/%3E%3Ccircle cx='39' cy='34' r='2.6' fill='%2315222b'/%3E%3Cpath d='M24 21c-2-4-6-5-8-4 0 4 3 7 8 7z' fill='%232fbfa8'/%3E%3Cpath d='M42 21c2-4 6-5 8-4 0 4-3 7-8 7z' fill='%232fbfa8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --dx-ink:#12262f;
+  --dx-ink-soft:#31505c;
+  --dx-teal:#1f9c8a;
+  --dx-teal-deep:#137066;
+  --dx-coral:#e2603f;
+  --dx-sand:#f4f1e9;
+  --dx-paper:#fbfaf6;
+  --dx-line:#dfe3de;
+  --dx-white:#ffffff;
+  --dx-radius:14px;
+  --dx-shadow:0 10px 30px rgba(18,38,47,.09);
+  --dx-max:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color:var(--dx-ink);
+  background:var(--dx-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;letter-spacing:.01em;}
+p{margin:0 0 1em;}
+ul,ol{margin:0;padding:0;list-style:none;}
+.dx-shell{width:100%;max-width:var(--dx-max);margin:0 auto;padding:0 22px;}
+.dx-section{padding:64px 0;scroll-margin-top:120px;}
+.dx-section--tint{background:linear-gradient(180deg,#f2f6f3,#fbfaf6);}
+.dx-section--deep{background:var(--dx-ink);color:#e7efec;}
+.dx-section--deep h2,.dx-section--deep h3{color:#fff;}
+.dx-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--dx-teal-deep);font-weight:700;margin-bottom:14px;
+}
+.dx-eyebrow::before{content:"";width:26px;height:2px;background:var(--dx-teal);}
+.dx-section--deep .dx-eyebrow{color:#6fe0cd;}
+.dx-h2{font-size:clamp(24px,3.1vw,34px);margin-bottom:12px;}
+.dx-sub{color:var(--dx-ink-soft);font-size:15px;max-width:760px;margin-bottom:34px;}
+.dx-section--deep .dx-sub{color:#a8c2bd;}
+
+/* ---------- top notice + header ---------- */
+.dx-topbar{
+  position:sticky;top:0;z-index:120;
+  background:var(--dx-paper);
+  box-shadow:0 1px 0 rgba(18,38,47,.08);
+}
+.dx-notice{
+  background:var(--dx-ink);color:#dff0eb;font-size:13px;
+  display:flex;align-items:center;gap:12px;padding:8px 22px;
+  justify-content:center;text-align:center;
+}
+.dx-notice strong{color:#7fe6d2;font-weight:700;}
+.dx-notice .dx-notice-tag{
+  background:var(--dx-coral);color:#fff;font-size:11px;font-weight:700;
+  padding:2px 8px;border-radius:99px;letter-spacing:.08em;flex:0 0 auto;
+}
+.dx-header{
+  display:flex;align-items:center;gap:20px;
+  padding:14px 22px;max-width:var(--dx-max);margin:0 auto;flex-wrap:wrap;
+}
+.dx-brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:19px;letter-spacing:.02em;}
+.dx-brand-mark{
+  width:38px;height:38px;border-radius:11px;background:var(--dx-ink);
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.dx-brand-mark svg{width:24px;height:24px;}
+.dx-brand small{display:block;font-size:10px;letter-spacing:.26em;color:var(--dx-teal-deep);font-weight:700;}
+.dx-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap;}
+.dx-nav a{
+  font-size:14px;font-weight:600;color:var(--dx-ink-soft);
+  padding:7px 12px;border-radius:9px;transition:.18s;
+}
+.dx-nav a:hover{background:#e8f4f0;color:var(--dx-teal-deep);}
+.dx-head-tools{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.dx-search{
+  display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--dx-line);
+  border-radius:99px;padding:6px 8px 6px 14px;
+}
+.dx-search input{
+  border:0;outline:0;background:transparent;font-size:13px;width:150px;color:var(--dx-ink);
+}
+.dx-search button{
+  border:0;background:var(--dx-teal);color:#fff;border-radius:99px;
+  padding:6px 14px;font-size:12.5px;font-weight:700;letter-spacing:.04em;
+}
+.dx-search button:hover{background:var(--dx-teal-deep);}
+.dx-hamburger{
+  display:none;width:42px;height:38px;border:1px solid var(--dx-line);
+  background:#fff;border-radius:10px;position:relative;
+}
+.dx-hamburger span{
+  position:absolute;left:11px;right:11px;height:2px;background:var(--dx-ink);
+  transition:.2s;border-radius:2px;
+}
+.dx-hamburger span:nth-child(1){top:13px;}
+.dx-hamburger span:nth-child(2){top:18px;}
+.dx-hamburger span:nth-child(3){top:23px;}
+.dx-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg);}
+.dx-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.dx-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg);}
+.dx-search-hint{
+  font-size:12.5px;color:var(--dx-teal-deep);padding:0 22px 10px;
+  max-width:var(--dx-max);margin:0 auto;min-height:0;
+}
+.dx-search-hint:empty{display:none;}
+
+/* ---------- hero ---------- */
+.dx-hero{padding:46px 0 58px;position:relative;overflow:hidden;}
+.dx-hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);
+  gap:44px;align-items:center;
+}
+.dx-hero-tag{
+  display:inline-flex;align-items:center;gap:8px;background:#e2f4ef;color:var(--dx-teal-deep);
+  font-size:12px;font-weight:700;letter-spacing:.14em;padding:6px 13px;border-radius:99px;margin-bottom:18px;
+}
+.dx-hero h1{
+  font-size:clamp(34px,5.4vw,58px);line-height:1.06;letter-spacing:-.01em;margin-bottom:18px;
+}
+.dx-hero h1 em{font-style:normal;color:var(--dx-teal-deep);position:relative;}
+.dx-hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:4px;height:10px;background:rgba(47,191,168,.24);
+  border-radius:4px;z-index:-1;
+}
+.dx-lede{font-size:16px;color:var(--dx-ink-soft);max-width:520px;margin-bottom:24px;}
+.dx-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px;}
+.dx-btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:99px;font-weight:700;
+  font-size:14px;padding:12px 22px;border:1px solid transparent;transition:.18s;
+}
+.dx-btn--primary{background:var(--dx-ink);color:#fff;}
+.dx-btn--primary:hover{background:var(--dx-teal-deep);transform:translateY(-1px);}
+.dx-btn--ghost{background:#fff;border-color:var(--dx-line);color:var(--dx-ink);}
+.dx-btn--ghost:hover{border-color:var(--dx-teal);color:var(--dx-teal-deep);}
+.dx-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:520px;}
+.dx-stat{
+  background:#fff;border:1px solid var(--dx-line);border-radius:12px;padding:14px 15px;
+}
+.dx-stat b{display:block;font-size:22px;letter-spacing:-.01em;}
+.dx-stat span{font-size:12px;color:var(--dx-ink-soft);letter-spacing:.06em;}
+.dx-hero-visual{position:relative;}
+.dx-hero-frame{
+  border-radius:20px;overflow:hidden;box-shadow:var(--dx-shadow);background:#0e2027;
+  position:relative;aspect-ratio:16/13;
+}
+.dx-hero-frame svg{width:100%;height:100%;display:block;}
+.dx-hero-badge{
+  position:absolute;left:18px;bottom:18px;background:rgba(10,26,32,.82);color:#eaf6f2;
+  border-radius:12px;padding:11px 15px;font-size:12.5px;backdrop-filter:blur(6px);
+  border:1px solid rgba(127,230,210,.35);max-width:280px;
+}
+.dx-hero-badge b{color:#7fe6d2;display:block;font-size:13.5px;letter-spacing:.04em;}
+.dx-hero-mini{
+  position:absolute;right:-6px;top:-16px;background:#fff;border-radius:14px;padding:11px 15px;
+  box-shadow:var(--dx-shadow);font-size:12px;color:var(--dx-ink-soft);border:1px solid var(--dx-line);
+}
+.dx-hero-mini b{color:var(--dx-coral);font-size:15px;display:block;}
+
+/* ---------- focus / video ---------- */
+.dx-focus-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:30px;align-items:start;}
+.dx-focus-main{
+  background:#fff;border:1px solid var(--dx-line);border-radius:var(--dx-radius);overflow:hidden;
+  box-shadow:var(--dx-shadow);
+}
+.dx-focus-cover{position:relative;aspect-ratio:16/9;background:#0e2027;}
+.dx-focus-cover svg{width:100%;height:100%;}
+.dx-focus-play{
+  position:absolute;inset:0;display:grid;place-items:center;border:0;background:transparent;
+}
+.dx-focus-play i{
+  width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:.2s;
+}
+.dx-focus-play:hover i{transform:scale(1.08);background:#fff;}
+.dx-focus-play i::after{
+  content:"";border-left:18px solid var(--dx-ink);border-top:11px solid transparent;
+  border-bottom:11px solid transparent;margin-left:5px;
+}
+.dx-focus-body{padding:22px 24px 24px;}
+.dx-chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.dx-chip{
+  font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--dx-teal-deep);
+  background:#e6f5f1;border-radius:99px;padding:3px 11px;
+}
+.dx-chip--coral{color:#b23f24;background:#fce9e3;}
+.dx-focus-body h3{font-size:22px;margin-bottom:10px;}
+.dx-focus-body p{font-size:14.5px;color:var(--dx-ink-soft);margin-bottom:16px;}
+.dx-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#6d858f;margin-bottom:16px;}
+.dx-act-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.dx-act{
+  display:inline-flex;align-items:center;gap:6px;border:1px solid var(--dx-line);background:#fff;
+  border-radius:99px;padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--dx-ink-soft);transition:.16s;
+}
+.dx-act:hover{border-color:var(--dx-teal);color:var(--dx-teal-deep);}
+.dx-act.is-on{background:#fdece7;border-color:#f2b9a8;color:#b23f24;}
+.dx-act.is-saved{background:#e6f5f1;border-color:#a8ded3;color:var(--dx-teal-deep);}
+.dx-focus-side{display:grid;gap:16px;}
+.dx-side-item{
+  display:grid;grid-template-columns:88px minmax(0,1fr);gap:14px;background:#fff;
+  border:1px solid var(--dx-line);border-radius:12px;padding:12px;transition:.18s;
+}
+.dx-side-item:hover{transform:translateY(-2px);box-shadow:var(--dx-shadow);border-color:#bfe3da;}
+.dx-side-thumb{aspect-ratio:1/1;border-radius:9px;overflow:hidden;background:#0e2027;}
+.dx-side-thumb svg{width:100%;height:100%;}
+.dx-side-item h4{font-size:14.5px;margin-bottom:5px;}
+.dx-side-item p{font-size:12.5px;color:#6d858f;margin:0 0 6px;}
+.dx-side-item .dx-mini-tag{font-size:11px;color:var(--dx-coral);font-weight:700;letter-spacing:.06em;}
+
+/* video list */
+.dx-video-list{display:grid;gap:0;margin-top:42px;border-top:1px solid var(--dx-line);}
+.dx-video-row{
+  display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:18px;align-items:center;
+  padding:18px 4px;border-bottom:1px solid var(--dx-line);
+}
+.dx-video-row:hover{background:#f6faf8;}
+.dx-video-num{font-size:13px;font-weight:800;color:#9fb4ad;letter-spacing:.08em;}
+.dx-video-main h4{font-size:16px;margin-bottom:4px;}
+.dx-video-main p{font-size:13px;color:#6d858f;margin:0 0 7px;max-width:720px;}
+.dx-video-tags{display:flex;gap:7px;flex-wrap:wrap;font-size:11.5px;color:var(--dx-teal-deep);}
+.dx-video-tags span{background:#eef7f4;border-radius:99px;padding:2px 9px;}
+.dx-video-stats{display:flex;gap:14px;font-size:12px;color:#6d858f;flex-wrap:wrap;justify-content:flex-end;}
+.dx-video-stats b{color:var(--dx-ink);font-weight:700;}
+
+/* ---------- topic / brand story ---------- */
+.dx-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.dx-topic-card{
+  background:#fff;border:1px solid var(--dx-line);border-radius:var(--dx-radius);padding:22px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.dx-topic-card--wide{grid-column:span 2;background:linear-gradient(135deg,#e8f6f2,#fbfaf6);}
+.dx-topic-status{
+  font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--dx-teal-deep);
+  background:#dff2ec;border-radius:99px;padding:3px 10px;align-self:flex-start;
+}
+.dx-topic-status--hot{color:#b23f24;background:#fce9e3;}
+.dx-topic-card h3{font-size:18px;}
+.dx-topic-card p{font-size:13.5px;color:var(--dx-ink-soft);margin:0;}
+.dx-topic-items{display:grid;gap:8px;margin-top:2px;}
+.dx-topic-items li{
+  font-size:13px;color:var(--dx-ink-soft);padding-left:16px;position:relative;
+}
+.dx-topic-items li::before{
+  content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--dx-teal);
+}
+.dx-topic-figure{aspect-ratio:16/8;border-radius:10px;overflow:hidden;background:#0e2027;margin-bottom:2px;}
+.dx-topic-figure svg{width:100%;height:100%;}
+
+/* ---------- authors ---------- */
+.dx-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.dx-author-card{
+  display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;background:#fff;
+  border:1px solid var(--dx-line);border-radius:var(--dx-radius);padding:20px;align-items:start;
+}
+.dx-section--deep .dx-author-card{background:#17313a;border-color:#254650;}
+.dx-avatar{
+  width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+  font-weight:800;font-size:22px;color:#fff;letter-spacing:.02em;flex:0 0 auto;
+}
+.dx-author-card h3{font-size:16.5px;margin-bottom:3px;}
+.dx-author-field{font-size:12px;color:var(--dx-teal-deep);font-weight:700;letter-spacing:.06em;margin-bottom:8px;}
+.dx-section--deep .dx-author-field{color:#6fe0cd;}
+.dx-author-nums{display:flex;gap:16px;font-size:12px;color:#6d858f;margin-bottom:8px;}
+.dx-section--deep .dx-author-nums{color:#9dbab4;}
+.dx-author-nums b{color:var(--dx-ink);}
+.dx-section--deep .dx-author-nums b{color:#fff;}
+.dx-author-desc{font-size:13px;color:var(--dx-ink-soft);margin:0 0 10px;}
+.dx-section--deep .dx-author-desc{color:#b6ccc7;}
+.dx-author-more{font-size:12.5px;font-weight:700;color:var(--dx-teal-deep);border:0;background:transparent;padding:0;}
+.dx-section--deep .dx-author-more{color:#6fe0cd;}
+
+/* ---------- parse / analysis ---------- */
+.dx-parse-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:36px;}
+.dx-parse h3{font-size:18px;margin:26px 0 10px;}
+.dx-parse h3:first-child{margin-top:0;}
+.dx-parse p{font-size:14.5px;color:var(--dx-ink-soft);}
+.dx-parse-side{display:grid;gap:16px;align-content:start;}
+.dx-quote{
+  background:#fff;border-left:4px solid var(--dx-teal);border-radius:0 12px 12px 0;
+  padding:18px 20px;font-size:14px;color:var(--dx-ink-soft);box-shadow:var(--dx-shadow);
+}
+.dx-quote b{display:block;color:var(--dx-ink);margin-top:8px;font-size:13px;}
+.dx-num-card{
+  background:var(--dx-ink);color:#dff0eb;border-radius:var(--dx-radius);padding:20px 22px;
+}
+.dx-num-card h4{font-size:13px;letter-spacing:.14em;color:#7fe6d2;margin-bottom:14px;}
+.dx-num-card li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;padding:8px 0;border-bottom:1px dashed #2c4f59;}
+.dx-num-card li:last-child{border-bottom:0;}
+.dx-num-card b{color:#fff;}
+
+/* ---------- reviews ---------- */
+.dx-review-cols{columns:2;column-gap:20px;}
+.dx-review{
+  break-inside:avoid;background:#fff;border:1px solid var(--dx-line);border-radius:12px;
+  padding:16px 18px;margin-bottom:18px;
+}
+.dx-review-top{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.dx-review-av{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  font-size:13px;font-weight:800;flex:0 0 auto;
+}
+.dx-review-top b{font-size:13.5px;}
+.dx-review-top span{font-size:11.5px;color:#8aa39c;margin-left:auto;letter-spacing:.04em;}
+.dx-review p{font-size:13.5px;color:var(--dx-ink-soft);margin:0 0 8px;}
+.dx-review-stars{font-size:12px;color:var(--dx-coral);letter-spacing:.1em;}
+
+/* ---------- FAQ ---------- */
+.dx-faq{display:grid;gap:12px;}
+.dx-faq details{
+  background:#fff;border:1px solid var(--dx-line);border-radius:12px;padding:0 20px;
+  transition:.18s;
+}
+.dx-faq details[open]{border-color:#a8ded3;box-shadow:var(--dx-shadow);}
+.dx-faq summary{
+  list-style:none;cursor:pointer;font-weight:700;font-size:14.5px;padding:16px 30px 16px 0;
+  position:relative;
+}
+.dx-faq summary::-webkit-details-marker{display:none;}
+.dx-faq summary::after{
+  content:"+";position:absolute;right:0;top:14px;font-size:20px;color:var(--dx-teal-deep);font-weight:700;
+}
+.dx-faq details[open] summary::after{content:"–";}
+.dx-faq details p{font-size:13.5px;color:var(--dx-ink-soft);padding:0 0 16px;}
+
+/* ---------- news / partners ---------- */
+.dx-news-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:34px;}
+.dx-news-list{display:grid;gap:2px;}
+.dx-news-item{
+  display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:14px 0;
+  border-bottom:1px solid var(--dx-line);align-items:start;
+}
+.dx-news-date{font-size:12px;color:var(--dx-teal-deep);font-weight:700;letter-spacing:.05em;padding-top:2px;}
+.dx-news-item h4{font-size:15px;margin-bottom:4px;}
+.dx-news-item p{font-size:13px;color:#6d858f;margin:0;}
+.dx-partner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-content:start;}
+.dx-partner{
+  background:#fff;border:1px solid var(--dx-line);border-radius:12px;padding:16px;
+  display:flex;align-items:center;gap:12px;font-size:13.5px;font-weight:700;
+}
+.dx-partner i{
+  width:34px;height:34px;border-radius:9px;display:grid;place-items:center;color:#fff;
+  font-style:normal;font-size:13px;flex:0 0 auto;
+}
+.dx-partner small{display:block;font-size:11.5px;color:#8aa39c;font-weight:600;letter-spacing:.04em;}
+
+/* ---------- submit / contact ---------- */
+.dx-cta{
+  background:linear-gradient(120deg,#132b34,#1d5b55);color:#eaf6f2;border-radius:20px;
+  padding:38px 34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;
+}
+.dx-cta h2{font-size:clamp(22px,2.8vw,30px);margin-bottom:8px;}
+.dx-cta p{color:#a8c2bd;font-size:14px;margin:0;max-width:560px;}
+.dx-cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.dx-cta .dx-btn--primary{background:#7fe6d2;color:#0f2a2f;}
+.dx-cta .dx-btn--primary:hover{background:#fff;}
+.dx-cta .dx-btn--ghost{background:transparent;border-color:#3f6f6a;color:#dff0eb;}
+.dx-cta .dx-btn--ghost:hover{border-color:#7fe6d2;color:#7fe6d2;}
+
+/* ---------- footer ---------- */
+.dx-footer{background:#0d2027;color:#a9c3be;padding:52px 0 26px;font-size:13.5px;}
+.dx-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px;}
+.dx-footer h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.06em;}
+.dx-footer li{margin-bottom:8px;}
+.dx-footer a:hover{color:#7fe6d2;}
+.dx-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff;font-weight:800;font-size:17px;}
+.dx-footer-brand .dx-brand-mark{background:#1d3d46;}
+.dx-footer-bottom{
+  border-top:1px solid #1d3d46;padding-top:18px;display:flex;gap:16px;flex-wrap:wrap;
+  justify-content:space-between;font-size:12.5px;color:#7f9b96;
+}
+
+/* back to top */
+.dx-totop{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
+  border:0;background:var(--dx-ink);color:#fff;font-size:18px;box-shadow:var(--dx-shadow);
+  opacity:0;pointer-events:none;transition:.24s;z-index:100;
+}
+.dx-totop.show{opacity:1;pointer-events:auto;}
+.dx-totop:hover{background:var(--dx-teal-deep);}
+
+/* modal + toast */
+.dx-modal{
+  position:fixed;inset:0;background:rgba(8,22,27,.55);display:none;place-items:center;
+  padding:20px;z-index:200;
+}
+.dx-modal.open{display:grid;}
+.dx-modal-card{
+  background:#fff;border-radius:18px;max-width:520px;width:100%;padding:26px 26px 22px;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);max-height:86vh;overflow:auto;
+}
+.dx-modal-card h3{font-size:19px;margin-bottom:8px;}
+.dx-modal-card p{font-size:13.5px;color:var(--dx-ink-soft);}
+.dx-modal-close{
+  float:right;border:0;background:#eef4f2;width:32px;height:32px;border-radius:50%;
+  font-size:16px;color:var(--dx-ink);line-height:1;
+}
+.dx-field{display:grid;gap:6px;margin-bottom:12px;}
+.dx-field label{font-size:12.5px;font-weight:700;color:var(--dx-ink-soft);}
+.dx-field input,.dx-field textarea,.dx-field select{
+  border:1px solid var(--dx-line);border-radius:10px;padding:10px 12px;font-size:13.5px;
+  font-family:inherit;outline:0;background:#fbfaf6;
+}
+.dx-field input:focus,.dx-field textarea:focus,.dx-field select:focus{border-color:var(--dx-teal);}
+.dx-modal-actions{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;}
+.dx-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:var(--dx-ink);
+  color:#eaf6f2;font-size:13.5px;padding:11px 20px;border-radius:99px;box-shadow:var(--dx-shadow);
+  opacity:0;pointer-events:none;transition:.26s;z-index:300;
+}
+.dx-toast.show{opacity:1;transform:translate(-50%,0);}
+
+/* responsive */
+@media(max-width:980px){
+  .dx-hero-grid,.dx-focus-grid,.dx-parse-grid,.dx-news-grid{grid-template-columns:minmax(0,1fr);}
+  .dx-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .dx-topic-card--wide{grid-column:span 2;}
+  .dx-footer-grid{grid-template-columns:1fr 1fr;}
+  .dx-cta{grid-template-columns:minmax(0,1fr);}
+}
+@media(max-width:760px){
+  .dx-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;background:var(--dx-paper);
+    border-top:1px solid var(--dx-line);padding:10px 18px 16px;flex-direction:column;gap:2px;
+    box-shadow:0 18px 30px rgba(18,38,47,.12);
+  }
+  .dx-nav.open{display:flex;}
+  .dx-header{position:relative;flex-wrap:nowrap;justify-content:space-between;}
+  .dx-hamburger{display:block;}
+  .dx-head-tools{margin-left:0;}
+  .dx-search input{width:104px;}
+  .dx-search{padding:5px 6px 5px 11px;}
+  .dx-review-cols{columns:1;}
+  .dx-author-grid{grid-template-columns:minmax(0,1fr);}
+  .dx-topic-grid{grid-template-columns:minmax(0,1fr);}
+  .dx-topic-card--wide{grid-column:span 1;}
+  .dx-footer-grid{grid-template-columns:minmax(0,1fr);}
+  .dx-video-row{grid-template-columns:36px minmax(0,1fr);}
+  .dx-video-stats{grid-column:2;justify-content:flex-start;}
+  .dx-hero-mini{right:0;top:-10px;}
+  .dx-section{padding:48px 0;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="dx-topbar">
+  <div class="dx-notice">
+    <span class="dx-notice-tag">官方发布</span>
+    <span><strong>「城市呼吸」冬季企划</strong>今日上线首播，同步开放投稿报名，首批收录 24 部原创短片</span>
+  </div>
+  <header class="dx-header">
+    <a class="dx-brand" href="#dx-hero" aria-label="大象视频官方网站首页">
+      <span class="dx-brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img" aria-label="大象视频品牌标识">
+          <path d="M18 40c0-10 5-18 14-18s14 8 14 18c0 3-2 6-5 6H23c-3 0-5-3-5-6z" fill="#2fbfa8"/>
+          <circle cx="27" cy="34" r="2.6" fill="#12262f"/>
+          <circle cx="39" cy="34" r="2.6" fill="#12262f"/>
+          <path d="M24 21c-2-4-6-5-8-4 0 4 3 7 8 7z" fill="#e2603f"/>
+          <path d="M42 21c2-4 6-5 8-4 0 4-3 7-8 7z" fill="#e2603f"/>
+        </svg>
+      </span>
+      <span>大象视频<small>ELEPHANT VIDEO</small></span>
+    </a>
+    <nav class="dx-nav" id="dx-nav" aria-label="主导航">
+      <a href="#dx-focus">焦点首播</a>
+      <a href="#dx-programs">专题企划</a>
+      <a href="#dx-creators">创作者</a>
+      <a href="#dx-parse">品牌解析</a>
+      <a href="#dx-reviews">用户口碑</a>
+      <a href="#dx-help">帮助中心</a>
+    </nav>
+    <div class="dx-head-tools">
+      <div class="dx-search">
+        <input id="dx-search-input" type="search" placeholder="搜索视频、作者、专题" aria-label="站内搜索">
+        <button id="dx-search-btn" type="button">搜索</button>
+      </div>
+      <button class="dx-hamburger" id="dx-hamburger" type="button" aria-expanded="false" aria-controls="dx-nav" aria-label="展开导航菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="dx-search-hint" id="dx-search-hint" aria-live="polite"></div>
+</div>
+
+<main>
+
+  <!-- S2 hero -->
+  <section class="dx-hero" id="dx-hero">
+    <div class="dx-shell">
+      <div class="dx-hero-grid">
+        <div>
+          <span class="dx-hero-tag">大象视频官方网站 · 原创高清视频品牌</span>
+          <h1>大象视频</h1>
+          <p class="dx-lede">一家专注于原创影像的<b>企业级视频品牌</b>。我们以纪实短片、人物访谈与在地文化为核心，为创作者搭建值得信赖的内容生态，让每一段真实的生活都有被看见的可能。</p>
+          <div class="dx-hero-actions">
+            <a class="dx-btn dx-btn--primary" href="#dx-focus">观看今日首播</a>
+            <a class="dx-btn dx-btn--ghost" href="#dx-creators">认识创作者</a>
+            <button class="dx-btn dx-btn--ghost" type="button" data-dx-modal="submit">我要投稿</button>
+          </div>
+          <div class="dx-stats">
+            <div class="dx-stat"><b>12,860+</b><span>原创视频作品</span></div>
+            <div class="dx-stat"><b>386 位</b><span>签约创作者</span></div>
+            <div class="dx-stat"><b>9 年</b><span>持续运营</span></div>
+          </div>
+        </div>
+        <div class="dx-hero-visual">
+          <div class="dx-hero-frame">
+            <svg viewBox="0 0 640 520" role="img" aria-label="大象视频品牌首屏主视觉：晨雾中的城市天际线与拍摄者剪影">
+              <defs>
+                <linearGradient id="dxSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#14313a"/>
+                  <stop offset=".55" stop-color="#2c6f68"/>
+                  <stop offset="1" stop-color="#8fd6c4"/>
+                </linearGradient>
+                <linearGradient id="dxFog" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#bfe7dc" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#bfe7dc" stop-opacity=".55"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="520" fill="url(#dxSky)"/>
+              <circle cx="480" cy="126" r="46" fill="#f2e6c8" opacity=".85"/>
+              <g fill="#0f2a30" opacity=".55">
+                <rect x="40" y="266" width="58" height="180"/>
+                <rect x="112" y="222" width="44" height="224"/>
+                <rect x="170" y="292" width="70" height="154"/>
+                <rect x="256" y="248" width="38" height="198"/>
+                <rect x="308" y="300" width="64" height="146"/>
+                <rect x="388" y="230" width="48" height="216"/>
+                <rect x="452" y="278" width="76" height="168"/>
+                <rect x="544" y="246" width="42" height="200"/>
+              </g>
+              <g fill="#e2603f" opacity=".8">
+                <rect x="128" y="252" width="10" height="12"/>
+                <rect x="410" y="262" width="10" height="12"/>
+                <rect x="470" y="308" width="10" height="12"/>
+              </g>
+              <rect y="378" width="640" height="142" fill="url(#dxFog)"/>
+              <g>
+                <circle cx="214" cy="404" r="18" fill="#0e2228"/>
+                <rect x="200" y="422" width="28" height="52" rx="12" fill="#0e2228"/>
+                <rect x="228" y="424" width="16" height="12" rx="4" fill="#7fe6d2"/>
+                <rect x="196" y="470" width="12" height="34" rx="6" fill="#0e2228"/>
+                <rect x="220" y="470" width="12" height="34" rx="6" fill="#0e2228"/>
+              </g>
+              <path d="M0 460 Q160 428 320 452 T640 440 L640 520 L0 520Z" fill="#0e2228"/>
+              <g stroke="#7fe6d2" stroke-width="2" opacity=".7">
+                <path d="M370 128 L410 128 M390 108 L390 148"/>
+              </g>
+            </svg>
+            <div class="dx-hero-badge">
+              <b>今日焦点 · 06:30 首播</b>
+              《雾起之前》：一座城醒来的十七分钟
+            </div>
+          </div>
+          <div class="dx-hero-mini"><b>4K</b> 正版高清 · 官方出品</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 focus -->
+  <section class="dx-section dx-section--tint" id="dx-focus">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Focus Premiere</span>
+      <h2 class="dx-h2">大象视频焦点首播：那些值得被完整看完的故事</h2>
+      <p class="dx-sub">作为深耕原创影像的垂直领域平台，我们每天在官网更新一部焦点作品，配以创作者手记与幕后访谈，让高清画面背后的思考也能被读懂。</p>
+
+      <div class="dx-focus-grid">
+        <article class="dx-focus-main">
+          <div class="dx-focus-cover">
+            <svg viewBox="0 0 800 450" role="img" aria-label="焦点视频封面：清晨码头边的雾气与正在收网的渔民">
+              <defs>
+                <linearGradient id="dxPort" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1b3d45"/>
+                  <stop offset="1" stop-color="#6fb3a6"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#dxPort)"/>
+              <circle cx="640" cy="96" r="52" fill="#f6e3bc" opacity=".8"/>
+              <g opacity=".5" fill="#0f2a30">
+                <path d="M0 320 Q120 292 240 314 T480 306 T800 318 L800 450 L0 450Z"/>
+              </g>
+              <g stroke="#d8f0e8" stroke-width="3" fill="none" opacity=".55">
+                <path d="M120 350 Q200 336 280 350"/>
+                <path d="M420 366 Q500 352 580 366"/>
+                <path d="M600 340 Q660 330 720 340"/>
+              </g>
+              <g>
+                <rect x="300" y="252" width="150" height="22" rx="8" fill="#0f2a30"/>
+                <path d="M320 252 L336 200 L352 252Z" fill="#e2603f"/>
+                <circle cx="380" cy="222" r="14" fill="#f2e6c8"/>
+              </g>
+              <g stroke="#cdeee4" stroke-width="2" opacity=".65" fill="none">
+                <path d="M240 260 L300 330 L360 300 L420 360"/>
+              </g>
+              <rect x="34" y="34" width="132" height="30" rx="15" fill="#0e2228" opacity=".8"/>
+              <text x="52" y="54" fill="#7fe6d2" font-size="14" font-family="sans-serif" font-weight="700">ORIGINAL · 4K</text>
+            </svg>
+            <button class="dx-focus-play" type="button" data-dx-modal="play" aria-label="播放《雾起之前》"><i></i></button>
+          </div>
+          <div class="dx-focus-body">
+            <div class="dx-chip-row">
+              <span class="dx-chip">纪实短片</span>
+              <span class="dx-chip">城市探索</span>
+              <span class="dx-chip dx-chip--coral">官方首播</span>
+            </div>
+            <h3>《雾起之前》：一座城醒来的十七分钟</h3>
+            <p>凌晨四点，渔港的灯比城市早亮。摄制组跟随三组渔民家庭记录下了一次完整的出海与归港，也记录下城市边缘生活的秩序与耐心。全片使用高清设备实拍，保留了大量环境声。</p>
+            <div class="dx-meta">
+              <span>作者：陈屿纪录</span>
+              <span>时长 17:42</span>
+              <span>2026-11-21 发布</span>
+            </div>
+            <div class="dx-act-row">
+              <button class="dx-act" type="button" data-dx-like><span data-dx-like-num>3,284</span> 点赞</button>
+              <button class="dx-act" type="button" data-dx-save>收藏</button>
+              <button class="dx-act" type="button" data-dx-modal="report">反馈</button>
+              <button class="dx-act" type="button" data-dx-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="dx-focus-side">
+          <article class="dx-side-item">
+            <div class="dx-side-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="专题缩略图：手工陶艺师在拉坯机前的双手特写">
+                <rect width="120" height="120" fill="#e2603f"/>
+                <circle cx="60" cy="52" r="26" fill="#f6e3bc"/>
+                <rect x="40" y="70" width="40" height="26" rx="10" fill="#8c3a24"/>
+                <rect x="30" y="96" width="60" height="10" rx="5" fill="#0f2a30"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《手里的泥》手作人一日纪实</h4>
+              <p>陶艺、木作、织补，三位手艺人讲述他们与材料相处的十年。</p>
+              <span class="dx-mini-tag">手作 · 22:08</span>
+            </div>
+          </article>
+          <article class="dx-side-item">
+            <div class="dx-side-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="专题缩略图：夜晚城市天台上唱歌的年轻人">
+                <rect width="120" height="120" fill="#1b3d45"/>
+                <circle cx="60" cy="46" r="16" fill="#7fe6d2"/>
+                <rect x="48" y="62" width="24" height="34" rx="10" fill="#2c6f68"/>
+                <rect x="18" y="98" width="84" height="10" rx="5" fill="#0f2a30"/>
+                <path d="M90 30 L96 44 L90 58" stroke="#e2603f" stroke-width="4" fill="none"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《天台音乐会》第七期</h4>
+              <p>不插电现场，六组独立音乐人把舞台搬到城市的屋顶。</p>
+              <span class="dx-mini-tag">音乐现场 · 41:16</span>
+            </div>
+          </article>
+          <article class="dx-side-item">
+            <div class="dx-side-thumb">
+              <svg viewBox="0 0 120 120" role="img" aria-label="专题缩略图：露营营地的帐篷与篝火">
+                <rect width="120" height="120" fill="#2f6b4f"/>
+                <path d="M28 92 L60 42 L92 92Z" fill="#f4f1e9"/>
+                <path d="M60 42 L60 92" stroke="#8a6a4a" stroke-width="4"/>
+                <circle cx="28" cy="98" r="8" fill="#e2603f"/>
+              </svg>
+            </div>
+            <div>
+              <h4>《山野过夜指南》露营实测</h4>
+              <p>三季帐篷、炉具与照明选择，一份可复用的装备清单。</p>
+              <span class="dx-mini-tag">户外 · 18:30</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="dx-video-list">
+        <article class="dx-video-row">
+          <span class="dx-video-num">01</span>
+          <div class="dx-video-main">
+            <h4>老菜场改造记：一座城市如何在摊位上更新</h4>
+            <p>跟拍城市更新团队的三个月，从图纸到开市，记录摊主的真实声音。</p>
+            <div class="dx-video-tags"><span>城市观察</span><span>社会记录</span></div>
+          </div>
+          <div class="dx-video-stats"><span><b>1.8万</b> 播放</span><span><b>2,104</b> 赞</span><span>收藏 <b>836</b></span></div>
+        </article>
+        <article class="dx-video-row">
+          <span class="dx-video-num">02</span>
+          <div class="dx-video-main">
+            <h4>一杯手冲的十二个变量：咖啡师拆解风味控制</h4>
+            <p>水温、研磨、注水节奏逐项对照实验，附可打印的参数记录表。</p>
+            <div class="dx-video-tags"><span>实用技巧</span><span>美食</span></div>
+          </div>
+          <div class="dx-video-stats"><span><b>9,420</b> 播放</span><span><b>1,512</b> 赞</span><span>收藏 <b>688</b></span></div>
+        </article>
+        <article class="dx-video-row">
+          <span class="dx-video-num">03</span>
+          <div class="dx-video-main">
+            <h4>对话摄影师林苓：为什么我坚持只拍自然光</h4>
+            <p>一场两小时的访谈，聊设备、聊耐心，也聊创作者如何面对自我怀疑。</p>
+            <div class="dx-video-tags"><span>人物访谈</span><span>创作幕后</span></div>
+          </div>
+          <div class="dx-video-stats"><span><b>1.2万</b> 播放</span><span><b>1,960</b> 赞</span><span>收藏 <b>412</b></span></div>
+        </article>
+        <article class="dx-video-row">
+          <span class="dx-video-num">04</span>
+          <div class="dx-video-main">
+            <h4>宠物的一天：把镜头交给一只三岁的柯基</h4>
+            <p>挂载相机 48 小时素材剪辑，从狗的视角重新认识一个家。</p>
+            <div class="dx-video-tags"><span>萌宠日常</span><span>治愈影像</span></div>
+          </div>
+          <div class="dx-video-stats"><span><b>2.4万</b> 播放</span><span><b>3,120</b> 赞</span><span>收藏 <b>1,104</b></span></div>
+        </article>
+        <article class="dx-video-row">
+          <span class="dx-video-num">05</span>
+          <div class="dx-video-main">
+            <h4>给新手上路的三点剪辑建议：从素材整理开始</h4>
+            <p>不堆叠特效，先讲清楚故事的起承转合，附 20 分钟实操演示。</p>
+            <div class="dx-video-tags"><span>教程干货</span><span>创作幕后</span></div>
+          </div>
+          <div class="dx-video-stats"><span><b>7,860</b> 播放</span><span><b>1,048</b> 赞</span><span>收藏 <b>932</b></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 programs -->
+  <section class="dx-section" id="dx-programs">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Programs</span>
+      <h2 class="dx-h2">六大专题企划：大象视频的品牌内容生态</h2>
+      <p class="dx-sub">我们以季节为单位推进专题企划，鼓励多元视角与包容表达。每个专题都开放投稿，好的作品会被放进官方网站首页与年度精品内容合集。</p>
+      <div class="dx-topic-grid">
+        <article class="dx-topic-card dx-topic-card--wide">
+          <span class="dx-topic-status dx-topic-status--hot">更新中 · 第 24 期</span>
+          <div class="dx-topic-figure">
+            <svg viewBox="0 0 800 400" role="img" aria-label="专题「城市呼吸」横幅：暮色下交错的高架桥与缓慢移动的车灯">
+              <rect width="800" height="400" fill="#1b3d45"/>
+              <path d="M0 300 L240 190 L420 300 L620 176 L800 288 L800 400 L0 400Z" fill="#0f2a30"/>
+              <g stroke="#7fe6d2" stroke-width="3" opacity=".75" fill="none">
+                <path d="M0 322 Q200 300 400 318 T800 306"/>
+                <path d="M0 344 Q200 322 400 340 T800 328"/>
+              </g>
+              <circle cx="160" cy="120" r="10" fill="#e2603f"/>
+              <circle cx="430" cy="96" r="7" fill="#f6e3bc"/>
+              <circle cx="660" cy="130" r="9" fill="#e2603f"/>
+            </svg>
+          </div>
+          <h3>「城市呼吸」冬季影像企划</h3>
+          <p>把镜头对准城市的边角与日常，记录普通人如何在钢筋水泥间找到喘息的空间。本期同步开放报名，入选作品可获得官方推广与创作补贴。</p>
+          <ul class="dx-topic-items">
+            <li>《地铁末班车》—— 夜间通勤者的六小时</li>
+            <li>《屋顶上的菜园》—— 社区共耕实验记录</li>
+            <li>《修鞋匠的下午》—— 一条街的十年变迁</li>
+          </ul>
+        </article>
+        <article class="dx-topic-card">
+          <span class="dx-topic-status">长期征稿</span>
+          <h3>「在地文化」方言计划</h3>
+          <p>用影像保存方言与地方手艺，已完成 18 个方言点的采集。</p>
+          <ul class="dx-topic-items">
+            <li>闽南语童谣三首修复</li>
+            <li>老木匠的榫卯口诀</li>
+            <li>小镇庙会的鼓点</li>
+          </ul>
+        </article>
+        <article class="dx-topic-card">
+          <span class="dx-topic-status">已完结 · 12 期</span>
+          <h3>「一平米」小空间生活</h3>
+          <p>在有限空间里谈生活品质，收纳、照明与气味管理实操。</p>
+          <ul class="dx-topic-items">
+            <li>六平米卧室的动线改造</li>
+            <li>墙面收纳的三种结构</li>
+            <li>小户型的灯光层次</li>
+          </ul>
+        </article>
+        <article class="dx-topic-card">
+          <span class="dx-topic-status">报名中</span>
+          <h3>新人影像扶持计划</h3>
+          <p>面向首次拍摄纪录短片的创作者，提供设备借用与剪辑指导。</p>
+          <ul class="dx-topic-items">
+            <li>5 位导师一对一改稿</li>
+            <li>官方器材库免费借用</li>
+            <li>结业作品统一上线</li>
+          </ul>
+        </article>
+        <article class="dx-topic-card">
+          <span class="dx-topic-status">更新中</span>
+          <h3>「手艺现场」工匠访谈</h3>
+          <p>走进作坊，记录一门手艺从材料到成品的完整过程。</p>
+          <ul class="dx-topic-items">
+            <li>竹编：一张席子的七十二道工序</li>
+            <li>打铜：锤子与火的节奏</li>
+            <li>蓝染：等待发酵的三十天</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 creators -->
+  <section class="dx-section dx-section--deep" id="dx-creators">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Creators</span>
+      <h2 class="dx-h2">创作者矩阵：大象视频的长期伙伴</h2>
+      <p class="dx-sub">平台与创作者共同成长。以下四位是本站签约作者，覆盖纪实、美食、户外与音乐四个方向，持续为社区输出正版高清内容。</p>
+      <div class="dx-author-grid">
+        <article class="dx-author-card">
+          <div class="dx-avatar" style="background:#1f9c8a">陈</div>
+          <div>
+            <h3>陈屿纪录</h3>
+            <div class="dx-author-field">纪实短片 · 城市观察</div>
+            <div class="dx-author-nums"><span>作品 <b>132</b></span><span>粉丝 <b>28.6万</b></span></div>
+            <p class="dx-author-desc">前新闻摄影记者，习惯在凌晨出门。拍摄不追求宏大叙事，更在意普通人在日常里的选择与耐心，代表作为《雾起之前》《老菜场改造记》。</p>
+            <button class="dx-author-more" type="button" data-dx-author="陈屿纪录|纪实短片导演，前新闻摄影记者，擅长长时段跟拍与现场收音，主张把镜头放低一点、把人拍完整。">查看作者档案</button>
+          </div>
+        </article>
+        <article class="dx-author-card">
+          <div class="dx-avatar" style="background:#e2603f">苏</div>
+          <div>
+            <h3>苏禾的厨房</h3>
+            <div class="dx-author-field">美食烹饪 · 家庭食谱</div>
+            <div class="dx-author-nums"><span>作品 <b>204</b></span><span>粉丝 <b>41.2万</b></span></div>
+            <p class="dx-author-desc">从家常菜起步的美食创作者，坚持所有配方亲手试做三遍以上。视频里保留失败镜头，希望让烹饪回到可复制的日常，而不是精致的表演。</p>
+            <button class="dx-author-more" type="button" data-dx-author="苏禾的厨房|家庭食谱创作者，主张把菜谱讲清楚，所有配方经过多轮实测，镜头里保留真实翻车片段。">查看作者档案</button>
+          </div>
+        </article>
+        <article class="dx-author-card">
+          <div class="dx-avatar" style="background:#8a6a4a">陆</div>
+          <div>
+            <h3>陆行山野</h3>
+            <div class="dx-author-field">户外活动 · 装备测评</div>
+            <div class="dx-author-nums"><span>作品 <b>96</b></span><span>粉丝 <b>15.8万</b></span></div>
+            <p class="dx-author-desc">长期在西南山地徒步与露营，拍摄风格克制，重实用轻炫技。每期视频都会附装备清单与预算区间，强调安全第一、量力而行。</p>
+            <button class="dx-author-more" type="button" data-dx-author="陆行山野|户外影像作者，专注山地徒步与露营实地测评，视频附完整装备清单与预算说明。">查看作者档案</button>
+          </div>
+        </article>
+        <article class="dx-author-card">
+          <div class="dx-avatar" style="background:#3d6fb3">林</div>
+          <div>
+            <h3>林间音乐现场</h3>
+            <div class="dx-author-field">音乐现场 · 独立创作</div>
+            <div class="dx-author-nums"><span>作品 <b>78</b></span><span>粉丝 <b>22.4万</b></span></div>
+            <p class="dx-author-desc">专注不插电现场的拍摄团队，把演出搬到天台、旧仓库与林地。坚持一次成片、尽量少修音，希望保留现场的声音与呼吸感。</p>
+            <button class="dx-author-more" type="button" data-dx-author="林间音乐现场|独立音乐现场拍摄团队，主张一次成片、少修音，记录演出真实的空间感与呼吸。">查看作者档案</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 brand parse -->
+  <section class="dx-section dx-section--tint" id="dx-parse">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Brand Story</span>
+      <h2 class="dx-h2">大象视频品牌解析：一家视频企业如何把「真实」做成长期能力</h2>
+      <div class="dx-parse-grid">
+        <div class="dx-parse">
+          <h3>从一间剪辑室出发：大象视频的九年</h3>
+          <p>很多人第一次认识大象视频，是在某个深夜刷到一部十几分钟的纪实短片。片子里没有夸张的配乐，也没有密集的转场，只有一个人、一件事，被完整地讲完。这正是我们创立时的想法：不追逐热点，先把故事讲清楚。2017 年，团队只有五个人，一间不到四十平米的剪辑室，两台二手相机。我们把第一支原创作品上传到官方网站时，播放量只有三位数，但评论区出现了第一条留言——「谢谢你们把它拍下来」。九年过去，这个朴素的起点成为我们评估所有内容的标准：它是否值得被完整看完，它是否让人愿意留下些什么。</p>
+          <h3>原创与正版：内容生态的两条底线</h3>
+          <p>作为一家持续运营的视频企业，大象视频把「原创」与「正版」视为内容生态的两条底线。平台上的每一部作品都经过版权核验与素材授权登记，签约创作者的收益按播放与授权分成结算，月度账单可在后台查询。我们不做未经授权的内容搬运，也不以标题诱导换取短期流量。为了保证品质，编辑部设有三道流程：立项评审看选题是否成立，粗剪反馈看叙事是否完整，成片校验看声音、字幕与画质是否达到高清标准。这套流程看起来慢，但它让创作者在一次次修改里获得真正的成长，也让用户在官方网站上看到的每一帧都值得信赖。</p>
+          <h3>垂直领域的深耕：为什么只做几件事</h3>
+          <p>视频行业的诱惑很多，综艺、短剧、直播，每一种都能带来更快的增长。大象视频选择在垂直领域深耕，把资源集中在纪实、人物、在地文化、生活方式与音乐现场五个方向。原因并不复杂：这些题材需要时间，而时间恰恰是被大多数平台忽略的成本。我们为长周期项目提供制作周期保护，允许创作者用三个月只完成一部作品；为新人提供设备借用与剪辑指导，让他们不必在起步阶段就被器材限制；为地方创作者提供差旅补贴，让镜头能延伸到更远的地方。这种略显笨拙的投入，换来了社区里大量真实、温暖的影像，也让「用户首选」这四个字不再只是宣传语。</p>
+          <h3>社区与责任：让观看变成参与</h3>
+          <p>我们认为，一个视频品牌的影响力不只体现在播放量上，更体现在它是否让观看变成参与。社区每季度开放一次公开征集，选题由用户投票产生；每部重点作品上线后，创作者会在评论区做一次集中答疑；每年年末，我们把用户评价与创作者手记整理成一份公开的内容报告，说明这一年我们对哪些选题投入了更多资源、哪些方向做得不够。社会责任也落在具体的事情上：方言采集计划为地方语言留下影像档案，手作系列为老匠人保留工序记录，宠物救助专题促成了多次线下领养。这些内容不一定有最高的播放量，却是我们愿意长期承担的部分。</p>
+          <h3>面向下一个九年：保持耐心，保持开放</h3>
+          <p>2026 年，大象视频的官方网站完成了新一轮改版，新增了专题报名、投稿入口与创作者档案页。我们希望它不只是一个观看的地方，更是创作者寻找同伴、用户表达态度的社区。未来三年，平台计划把签约创作者扩展到 600 位，把在地文化的采集点扩展到 60 个，并继续坚持不刷量、不做诱导、不降低画质标准这三件事。行业在变，工具在变，但一家视频企业能被记住的理由，往往还是那几条：作品是否真诚，承诺是否兑现，人是否被当作人。大象视频愿意用下一个九年，继续回答这三个问题。</p>
+        </div>
+        <aside class="dx-parse-side">
+          <div class="dx-quote">
+            「我们不缺一部爆款，缺的是让人愿意反复回来的信任感。所以每一次上传，都按官方发布的标准来。」
+            <b>—— 大象视频编辑部</b>
+          </div>
+          <div class="dx-num-card">
+            <h4>平台年度数据</h4>
+            <ul>
+              <li><span>原创作品总量</span><b>12,860+</b></li>
+              <li><span>签约创作者</span><b>386 位</b></li>
+              <li><span>专题企划累计</span><b>64 期</b></li>
+              <li><span>高清素材授权</span><b>2,410 条</b></li>
+              <li><span>社区投稿通过率</span><b>31%</b></li>
+              <li><span>用户平均完播率</span><b>68.4%</b></li>
+            </ul>
+          </div>
+          <div class="dx-quote">
+            「在这里投稿第一次被认真回复，改了三版，最后上线那天我自己看了四遍。」
+            <b>—— 社区创作者 周小满</b>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 reviews -->
+  <section class="dx-section" id="dx-reviews">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Voices</span>
+      <h2 class="dx-h2">用户口碑：来自社区的九条真实评价</h2>
+      <p class="dx-sub">这些评价来自官方网站的评论区、投稿反馈与线下放映活动问卷，我们保留了原始语气与不同维度，不做统一润色。</p>
+      <div class="dx-review-cols">
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#1f9c8a">周</span><b>周小满</b><span>2026-11-19</span></div>
+          <p>《雾起之前》看了两遍。第二遍把声音开大，才发现环境声处理得特别细，码头的水声和拖网声一层层叠上来，比配乐更有力量。</p>
+          <div class="dx-review-stars">★★★★★</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#e2603f">阿</span><b>阿黎不吃香菜</b><span>2026-11-17</span></div>
+          <p>手冲那期参数表我打印出来了，按 92 度、1:15 试了三次，风味确实稳了。希望以后能出一版可以下载的 PDF。</p>
+          <div class="dx-review-stars">★★★★★</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#3d6fb3">老</span><b>老赵在路上</b><span>2026-11-15</span></div>
+          <p>户外装备测评是我见过最实在的，会明说哪些东西是智商税，预算区间也给得很清楚，这点很难得。</p>
+          <div class="dx-review-stars">★★★★☆</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#8a6a4a">木</span><b>木木夕</b><span>2026-11-12</span></div>
+          <p>画质是真的高清，投到电视上也不糊。就是有的片子时长偏长，建议出一个 5 分钟的精华剪辑版本。</p>
+          <div class="dx-review-stars">★★★★☆</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#137066">林</span><b>林深见鹿</b><span>2026-11-10</span></div>
+          <p>投稿流程比想象中顺，三天收到反馈，编辑给了很具体的修改意见，不是模板回复。这点非常加分。</p>
+          <div class="dx-review-stars">★★★★★</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#b23f24">陈</span><b>陈年的册子</b><span>2026-11-08</span></div>
+          <p>方言计划我很喜欢，但覆盖的方言点还是偏少，希望增加更多西南地区的采集，家里老人的口音快没人会说了。</p>
+          <div class="dx-review-stars">★★★★☆</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#2c6f68">夜</span><b>夜航船</b><span>2026-11-05</span></div>
+          <p>天台音乐会第七期是我今年听过最好的现场录音，不插电的氛围保留住了，没有过度修音，很珍贵。</p>
+          <div class="dx-review-stars">★★★★★</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#6b4ea8">小</span><b>小满的猫</b><span>2026-11-02</span></div>
+          <p>宠物那期看哭了，从狗视角拍的镜头调度很有意思。也谢谢平台做了领养专题，我家猫就是通过类似内容找到的。</p>
+          <div class="dx-review-stars">★★★★★</div>
+        </article>
+        <article class="dx-review">
+          <div class="dx-review-top"><span class="dx-review-av" style="background:#1b3d45">方</span><b>方寸之间</b><span>2026-10-30</span></div>
+          <p>整体内容品质稳定，但首页推荐有时更新不够快，周末想找新片会翻到旧内容，期待推荐算法再勤快一点。</p>
+          <div class="dx-review-stars">★★★☆☆</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 news + partners -->
+  <section class="dx-section dx-section--tint" id="dx-news">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Updates &amp; Partners</span>
+      <h2 class="dx-h2">企业动态与合作品牌：大象视频的官方发布</h2>
+      <div class="dx-news-grid">
+        <div>
+          <h3 style="font-size:17px;margin-bottom:14px;">近期企业动态</h3>
+          <div class="dx-news-list">
+            <article class="dx-news-item">
+              <div class="dx-news-date">2026-11-21</div>
+              <div>
+                <h4>「城市呼吸」冬季企划正式开放报名</h4>
+                <p>首批收录 24 部原创短片，报名截止 12 月 20 日，入选作品将在官方网站首页展示。</p>
+              </div>
+            </article>
+            <article class="dx-news-item">
+              <div class="dx-news-date">2026-11-14</div>
+              <div>
+                <h4>官方器材库扩容，新增 18 套录音设备</h4>
+                <p>签约创作者可在线预约借用，单次最长 15 天，支持异地寄送与归还。</p>
+              </div>
+            </article>
+            <article class="dx-news-item">
+              <div class="dx-news-date">2026-11-06</div>
+              <div>
+                <h4>大象视频获评年度优质内容平台</h4>
+                <p>在行业内容生态评选中，因原创比例与版权合规表现入选年度名单。</p>
+              </div>
+            </article>
+            <article class="dx-news-item">
+              <div class="dx-news-date">2026-10-28</div>
+              <div>
+                <h4>方言计划完成第 18 个采集点</h4>
+                <p>新增西南地区两个方言点共 46 小时素材，已整理为公开影像档案。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:17px;margin-bottom:14px;">合作品牌与伙伴</h3>
+          <div class="dx-partner-grid">
+            <div class="dx-partner"><i style="background:#1f9c8a">山</i><span>山野器材<small>户外装备支持</small></span></div>
+            <div class="dx-partner"><i style="background:#e2603f">拾</i><span>拾光咖啡<small>线下放映场地</small></span></div>
+            <div class="dx-partner"><i style="background:#3d6fb3">文</i><span>文汇书店<small>文化访谈共建</small></span></div>
+            <div class="dx-partner"><i style="background:#8a6a4a">匠</i><span>匠人工坊<small>手作系列联合出品</small></span></div>
+            <div class="dx-partner"><i style="background:#137066">城</i><span>城市更新研究所<small>城市观察学术支持</small></span></div>
+            <div class="dx-partner"><i style="background:#6b4ea8">声</i><span>声场录音棚<small>音乐现场技术合作</small></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 FAQ -->
+  <section class="dx-section" id="dx-help">
+    <div class="dx-shell">
+      <span class="dx-eyebrow">Help Center</span>
+      <h2 class="dx-h2">帮助中心：关于投稿、版权与观看的常见问题</h2>
+      <p class="dx-sub">如果没有找到答案，可以在评论区留言，或用页面底部的联系方式与编辑部沟通，工作日 48 小时内回复。</p>
+      <div class="dx-faq">
+        <details open>
+          <summary>如何向大象视频官方网站投稿？</summary>
+          <p>点击页面中的「我要投稿」按钮填写作品信息，附上可下载的成片链接与素材授权说明。初审一般在 3 个工作日内完成，通过后编辑会联系你沟通修改方向。</p>
+        </details>
+        <details>
+          <summary>投稿对画质和时长有要求吗？</summary>
+          <p>建议分辨率不低于 1080p，成片时长 5 至 60 分钟为宜。纪实类可以更长，但需要在投稿时说明叙事结构。音频质量同样重要，环境声与同期声请尽量保留原始素材。</p>
+        </details>
+        <details>
+          <summary>平台如何保障创作者的版权？</summary>
+          <p>所有上线作品都要完成版权登记与素材授权核验，平台不接收未经授权的搬运内容。创作者保留作品著作权，平台获得官方渠道的展示与推广授权，收益按签约条款分成。</p>
+        </details>
+        <details>
+          <summary>视频是否可以下载或二次使用？</summary>
+          <p>官方提供的下载仅限个人观看与学习用途，不得用于商业传播或二次剪辑。如需授权使用，请通过联系邮箱提交用途说明，我们会给出书面授权文件。</p>
+        </details>
+        <details>
+          <summary>新人没有专业设备可以参与吗？</summary>
+          <p>可以。新人影像扶持计划提供相机、录音设备与三脚架的免费借用，同时安排导师做一次剪辑指导。我们更看重选题与完成度，而不是器材档次。</p>
+        </details>
+        <details>
+          <summary>专题企划的报名结果如何通知？</summary>
+          <p>入选结果会在官方网站公告条与站内消息同步公布，未入选的作品也会收到一份简短的反馈意见，方便你继续打磨后再次投递。</p>
+        </details>
+        <details>
+          <summary>评论区的内容管理规则是什么？</summary>
+          <p>我们鼓励具体、有依据的讨论，禁止人身攻击、广告引流与未经授权的素材传播。违规内容会被折叠或删除，多次违规将限制评论权限。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 CTA -->
+  <section class="dx-section" id="dx-join" style="padding-top:0;">
+    <div class="dx-shell">
+      <div class="dx-cta">
+        <div>
+          <h2>把你的故事，交给大象视频</h2>
+          <p>无论是第一次按下录制键，还是已经拍了十年，这里都欢迎你上传作品。官方编辑部会认真看完每一份投稿，并给出具体反馈。</p>
+        </div>
+        <div class="dx-cta-actions">
+          <button class="dx-btn dx-btn--primary" type="button" data-dx-modal="submit">立即投稿</button>
+          <button class="dx-btn dx-btn--ghost" type="button" data-dx-modal="contact">联系我们</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="dx-footer">
+  <div class="dx-shell">
+    <div class="dx-footer-grid">
+      <div>
+        <div class="dx-footer-brand">
+          <span class="dx-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="大象视频页脚标识">
+              <path d="M18 40c0-10 5-18 14-18s14 8 14 18c0 3-2 6-5 6H23c-3 0-5-3-5-6z" fill="#2fbfa8"/>
+              <circle cx="27" cy="34" r="2.6" fill="#0d2027"/>
+              <circle cx="39" cy="34" r="2.6" fill="#0d2027"/>
+              <path d="M24 21c-2-4-6-5-8-4 0 4 3 7 8 7z" fill="#e2603f"/>
+              <path d="M42 21c2-4 6-5 8-4 0 4-3 7-8 7z" fill="#e2603f"/>
+            </svg>
+          </span>
+          大象视频
+        </div>
+        <p style="max-width:300px;">大象视频官方网站，专注原创高清影像的企业级内容平台。以纪实、人物与在地文化为核心，与创作者共同成长。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#dx-focus">焦点首播</a></li>
+          <li><a href="#dx-programs">专题企划</a></li>
+          <li><a href="#dx-creators">创作者矩阵</a></li>
+          <li><a href="#dx-parse">品牌故事</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#dx-join">作品投稿</a></li>
+          <li><a href="#dx-help">帮助中心</a></li>
+          <li><a href="#dx-news">企业动态</a></li>
+          <li><a href="#dx-reviews">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li>编辑部邮箱：editor@elephant-video.example</li>
+          <li>合作咨询：周一至周五 10:00–18:00</li>
+          <li>地址：创意园南区 3 号楼</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dx-footer-bottom">
+      <span>© 2017–2026 大象视频 版权所有 · 官方网站持续运营中</span>
+      <span>内容备案号：影字 2026-1108 · 广播电视节目制作经营许可</span>
+    </div>
+  </div>
+</footer>
+
+<button class="dx-totop" id="dx-totop" type="button" aria-label="回到顶部">↑</button>
+
+<div class="dx-modal" id="dx-modal" role="dialog" aria-modal="true" aria-labelledby="dx-modal-title">
+  <div class="dx-modal-card">
+    <button class="dx-modal-close" type="button" id="dx-modal-close" aria-label="关闭弹窗">×</button>
+    <h3 id="dx-modal-title">提示</h3>
+    <div id="dx-modal-body"></div>
+  </div>
+</div>
+
+<div class="dx-toast" id="dx-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var $ = function(s, c){ return (c||document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+  var toastEl = $('#dx-toast'), toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2300);
+  }
+
+  /* mobile nav */
+  var burger = $('#dx-hamburger'), nav = $('#dx-nav');
+  burger.addEventListener('click', function(){
+    var open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open', !open);
+  });
+  $$('#dx-nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* search feedback */
+  var searchInput = $('#dx-search-input'), searchBtn = $('#dx-search-btn'), hint = $('#dx-search-hint');
+  var index = [
+    '雾起之前 纪实短片 陈屿纪录',
+    '手冲咖啡 参数 苏禾的厨房',
+    '山野过夜指南 装备测评 陆行山野',
+    '天台音乐会 林间音乐现场',
+    '城市呼吸 冬季企划 报名',
+    '方言计划 在地文化',
+    '新人影像扶持计划 投稿',
+    '老菜场改造记 城市观察',
+    '宠物一天 治愈影像',
+    '剪辑建议 教程干货'
+  ];
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      hint.textContent = '请输入关键词，例如「城市」「咖啡」「投稿」';
+      return;
+    }
+    var hits = index.filter(function(item){ return item.indexOf(q) !== -1; });
+    if(hits.length){
+      hint.textContent = '找到 ' + hits.length + ' 条相关内容：' + hits.slice(0,3).join('；');
+    }else{
+      hint.textContent = '暂未找到「' + q + '」的直接结果，可在帮助中心留言，编辑部会协助检索。';
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* like */
+  $$('[data-dx-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = $('[data-dx-like-num]', btn);
+      var n = parseInt(numEl.textContent.replace(/,/g,''), 10) || 0;
+      if(btn.classList.contains('is-on')){
+        n = Math.max(0, n - 1);
+        btn.classList.remove('is-on');
+        toast('已取消点赞');
+      }else{
+        n = n + 1;
+        btn.classList.add('is-on');
+        toast('已点赞，感谢支持原创');
+      }
+      numEl.textContent = n.toLocaleString('en-US');
+    });
+  });
+
+  /* save */
+  $$('[data-dx-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btn.classList.toggle('is-saved');
+      var on = btn.classList.contains('is-saved');
+      btn.textContent = on ? '已收藏' : '收藏';
+      toast(on ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* copy link */
+  $$('[data-dx-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = '大象视频 · 《雾起之前》：一座城醒来的十七分钟';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ toast('内容信息已复制，可粘贴分享'); },
+          function(){ toast('复制失败，请手动分享'); });
+      }else{
+        toast('内容信息已生成，可手动分享');
+      }
+    });
+  });
+
+  /* modal */
+  var modal = $('#dx-modal'), modalTitle = $('#dx-modal-title'), modalBody = $('#dx-modal-body');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('open');
+  }
+  function closeModal(){ modal.classList.remove('open'); }
+  $('#dx-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  var modalContent = {
+    submit: {
+      title: '作品投稿入口',
+      html: '<p>请填写基本信息，编辑部会在 3 个工作日内回复。官方渠道仅通过本页面收集投稿。</p>' +
+        '<div class="dx-field"><label for="dx-f1">作品标题</label><input id="dx-f1" type="text" placeholder="例如：雾起之前"></div>' +
+        '<div class="dx-field"><label for="dx-f2">创作者昵称</label><input id="dx-f2" type="text" placeholder="你在社区的昵称"></div>' +
+        '<div class="dx-field"><label for="dx-f3">内容方向</label><select id="dx-f3"><option>纪实短片</option><option>人物访谈</option><option>美食烹饪</option><option>户外活动</option><option>音乐现场</option><option>在地文化</option></select></div>' +
+        '<div class="dx-field"><label for="dx-f4">作品说明</label><textarea id="dx-f4" rows="3" placeholder="简述选题、拍摄周期与成片时长"></textarea></div>' +
+        '<div class="dx-modal-actions"><button class="dx-btn dx-btn--primary" type="button" data-dx-submit-ok>提交投稿</button><button class="dx-btn dx-btn--ghost" type="button" data-dx-close>稍后再说</button></div>'
+    },
+    contact: {
+      title: '联系我们',
+      html: '<p>编辑部邮箱：editor@elephant-video.example<br>合作咨询：周一至周五 10:00–18:00<br>线下地址：创意园南区 3 号楼 2 层</p>' +
+        '<p>如需授权使用本站内容，请在邮件中说明用途、渠道与期限，我们会提供书面授权文件。</p>' +
+        '<div class="dx-modal-actions"><button class="dx-btn dx-btn--primary" type="button" data-dx-close>知道了</button></div>'
+    },
+    report: {
+      title: '反馈与举报',
+      html: '<p>如发现内容侵权、画质异常或评论违规，请选择类型并简要说明，我们会在两个工作日内核查。</p>' +
+        '<div class="dx-field"><label for="dx-r1">反馈类型</label><select id="dx-r1"><option>版权问题</option><option>画质或播放异常</option><option>评论违规</option><option>其他建议</option></select></div>' +
+        '<div class="dx-field"><label for="dx-r2">补充说明</label><textarea id="dx-r2" rows="3" placeholder="请描述具体情况"></textarea></div>' +
+        '<div class="dx-modal-actions"><button class="dx-btn dx-btn--primary" type="button" data-dx-submit-ok>提交反馈</button><button class="dx-btn dx-btn--ghost" type="button" data-dx-close>取消</button></div>'
+    },
+    play: {
+      title: '《雾起之前》：一座城醒来的十七分钟',
+      html: '<p>该片为 4K 高清成片，时长 17 分 42 秒，含完整环境声。播放器将在正式客户端与官方网站同步上线，当前页面为内容预览。</p>' +
+        '<p>导演手记：我们把机位放得很低，尽量不打扰正在工作的人。如果你也住在港口附近，欢迎在评论区写下一段你的清晨记忆。</p>' +
+        '<div class="dx-modal-actions"><button class="dx-btn dx-btn--primary" type="button" data-dx-close>继续浏览</button></div>'
+    }
+  };
+  $$('[data-dx-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var key = btn.getAttribute('data-dx-modal');
+      var data = modalContent[key];
+      if(data) openModal(data.title, data.html);
+    });
+  });
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(t.closest('[data-dx-close]')) closeModal();
+    if(t.closest('[data-dx-submit-ok]')){
+      closeModal();
+      toast('已提交，编辑部会尽快回复');
+    }
+  });
+
+  /* author popup */
+  $$('[data-dx-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var parts = btn.getAttribute('data-dx-author').split('|');
+      openModal(parts[0], '<p>' + parts[1] + '</p><p>该创作者为大象视频签约作者，作品在官方网站首发，支持高清观看与收藏。</p>' +
+        '<div class="dx-modal-actions"><button class="dx-btn dx-btn--primary" type="button" data-dx-close>关闭</button></div>');
+    });
+  });
+
+  /* back to top */
+  var toTop = $('#dx-totop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
